@@ -1,0 +1,261 @@
+﻿<krpano version="1.21" title="Virtual Tour">
+
+	<include url="skin/vtourskin.xml" />
+	<include url="plugins/circle_hotspots.xml"/>
+
+	<!-- customize skin settings: maps, gyro, webvr, thumbnails, tooltips, layout, design, ... -->
+	<skin_settings maps="true"
+	               maps_type="google"
+	               maps_bing_api_key=""
+	               maps_google_api_key=""
+	               maps_zoombuttons="false"
+	               maps_loadonfirstuse="true"
+	               gyro="true"
+	               gyro_keeplookingdirection="false"
+	               webvr="true"
+	               webvr_keeplookingdirection="true"
+	               webvr_prev_next_hotspots="true"
+	               autotour="false"
+	               littleplanetintro="false"
+	               followmousecontrol="false"
+	               title="true"
+	               thumbs="true"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="false"
+	               thumbs_text="false"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="false"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_buttons="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="false"
+	               tooltips_mapspots="false"
+	               deeplinking="false"
+	               loadscene_flags="MERGE"
+	               loadscene_blend="OPENBLEND(0.5, 0.0, 0.75, 0.05, linear)"
+	               loadscene_blend_prev="SLIDEBLEND(0.5, 180, 0.75, linear)"
+	               loadscene_blend_next="SLIDEBLEND(0.5,   0, 0.75, linear)"
+	               loadingtext=""
+	               layout_width="100%"
+	               layout_maxwidth="814"
+	               controlbar_width="-24"
+	               controlbar_height="40"
+	               controlbar_offset="20"
+	               controlbar_offset_closed="-40"
+	               controlbar_overlap.no-fractionalscaling="10"
+	               controlbar_overlap.fractionalscaling="0"
+	               design_skin_images="vtourskin.png"
+	               design_bgcolor="0x2D3E50"
+	               design_bgalpha="0.8"
+	               design_bgborder="0"
+	               design_bgroundedge="1"
+	               design_bgshadow="0 4 10 0x000000 0.3"
+	               design_thumbborder_bgborder="3 0xFFFFFF 1.0"
+	               design_thumbborder_padding="2"
+	               design_thumbborder_bgroundedge="0"
+	               design_text_css="color:#FFFFFF; font-family:Arial;"
+	               design_text_shadow="1"
+	               />
+
+	<!--
+	    For an alternative skin design either change the <skin_settings> values 
+	    from above or optionally include one of the predefined designs from below.
+	-->
+	<!-- <include url="skin/vtourskin_design_flat_light.xml"  /> -->
+	<!-- <include url="skin/vtourskin_design_glass.xml"       /> -->
+	<!-- <include url="skin/vtourskin_design_ultra_light.xml" /> -->
+	<!-- <include url="skin/vtourskin_design_117.xml"         /> -->
+	<!-- <include url="skin/vtourskin_design_117round.xml"    /> -->
+	<!-- <include url="skin/vtourskin_design_black.xml"       /> -->
+	
+
+	
+	<scene name="scene_1" title="1" onstart="" thumburl="panos/1.tiles/thumb.jpg" lat="-6.23582500" lng="106.81496388" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/1.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/1.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-10.402" atv="-2.397" linkedscene="scene_2" linkedscene_lookat="-1.46,-1.04,120.0" />
+
+	</scene>
+
+	<scene name="scene_2" title="2" onstart="" thumburl="panos/2.tiles/thumb.jpg" lat="-6.23573055" lng="106.81193612" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/2.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/2.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-2.493" atv="2.573" linkedscene="scene_3" linkedscene_lookat="4.8,2.71,120.0" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="172.370" atv="11.094" linkedscene="scene_1" linkedscene_lookat="2.71,-2.5,120.0" />
+
+	</scene>
+
+	<scene name="scene_3" title="3" onstart="" thumburl="panos/3.tiles/thumb.jpg" lat="-6.23601945" lng="106.80306112" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/3.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/3.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-90.634" atv="3.509" linkedscene="scene_5" linkedscene_lookat="-6.14,-0.86,120.0" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="178.829" atv="12.191" linkedscene="scene_2" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="143.372" atv="14.741" linkedscene="scene_4" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot4" style="skin_hotspotstyle" ath="5.079" atv="3.347" linkedscene="scene_6" linkedscene_lookat="13.13,-1.04,120.0" />
+
+	</scene>
+
+	<scene name="scene_4" title="4" onstart="" thumburl="panos/4.tiles/thumb.jpg" lat="-6.23588612" lng="106.80304722" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/4.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/4.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="64.331" atv="0.480" linkedscene="scene_3" linkedscene_lookat="7.92,2.29,120.0" />
+
+	</scene>
+
+	<scene name="scene_5" title="5" onstart="" thumburl="panos/5.tiles/thumb.jpg" lat="-6.23589445" lng="106.80303888" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/5.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/5.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="176.098" atv="9.438" linkedscene="scene_3" linkedscene_lookat="-0.21,0.0,120.0" />
+
+	</scene>
+
+	<scene name="scene_6" title="6" onstart="" thumburl="panos/6.tiles/thumb.jpg" lat="-6.23587778" lng="106.80307778" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/6.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/6.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-179.210" atv="13.001" linkedscene="scene_3" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="7.959" atv="6.998" linkedscene="scene_7" linkedscene_lookat="2.4,-0.15,120.0" />
+
+	</scene>
+
+	<scene name="scene_7" title="7" onstart="" thumburl="panos/7.tiles/thumb.jpg" lat="-6.23590000" lng="106.81497222" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/7.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/7.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="95.025" atv="4.070" linkedscene="scene_6" linkedscene_hoffset="0.0" use3dtransition="true" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="-153.030" atv="9.283" linkedscene="scene_8" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_8" title="8" onstart="" thumburl="panos/8.tiles/thumb.jpg" lat="-6.23591112" lng="106.81497222" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/8.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/8.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-91.237" atv="1.006" linkedscene="scene_7" linkedscene_lookat="95.01,-4.1,120.0" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="82.216" atv="0.863" linkedscene="scene_10" linkedscene_lookat="403.95,9.42,120.0" />
+		<hotspot name="spot3" style="skin_hotspotstyle" ath="-1.673" atv="-3.599" linkedscene="scene_9" linkedscene_lookat="4.56,-4.17,120.0" />
+
+	</scene>
+
+	<scene name="scene_9" title="9" onstart="" thumburl="panos/9.tiles/thumb.jpg" lat="-6.23580278" lng="106.80310000" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/9.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/9.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="178.757" atv="-2.115" linkedscene="scene_8" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_10" title="10" onstart="" thumburl="panos/10.tiles/thumb.jpg" lat="-6.23589722" lng="106.81193612" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/10.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/10.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="-43.060" atv="8.347" linkedscene="scene_11" linkedscene_lookat="-12.15,1.51,120.0" />
+		<hotspot name="spot2" style="skin_hotspotstyle" ath="141.046" atv="7.034" linkedscene="scene_8" linkedscene_hoffset="0.0" use3dtransition="true" />
+
+	</scene>
+
+	<scene name="scene_11" title="11" onstart="" thumburl="panos/11.tiles/thumb.jpg" lat="-6.23591667" lng="106.80303888" alt="19.00" heading="0.0">
+		
+		<control bouncinglimits="calc:image.cube ? true : false" />
+
+		<view hlookat="0.0" vlookat="0.0" fovtype="MFOV" fov="120" maxpixelzoom="2.0" fovmin="70" fovmax="140" limitview="auto" />
+
+		<preview url="panos/11.tiles/preview.jpg" />
+
+		<image prealign="0|0.0|0">
+			<cube url="panos/11.tiles/%s/l%l/%v/l%l_%s_%v_%h.jpg" multires="512,1024,2112" />
+		</image>
+
+		<hotspot name="spot1" style="skin_hotspotstyle" ath="44.396" atv="6.098" linkedscene="scene_10" linkedscene_lookat="-38.93,-0.0,120.0" />
+
+	</scene>
+
+
+</krpano>
